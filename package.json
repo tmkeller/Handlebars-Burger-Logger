@@ -1,0 +1,25 @@
+{
+  "name": "Handlebars-Burger-Logger",
+  "version": "1.0.0",
+  "description": "A fun restaurant app to log burgers eaten. Made for the University of Washington's Winter 2020-2021 Coding Bootcamp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmkeller/Handlebars-Burger-Logger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmkeller/Handlebars-Burger-Logger/issues"
+  },
+  "homepage": "https://github.com/tmkeller/Handlebars-Burger-Logger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  }
+}
