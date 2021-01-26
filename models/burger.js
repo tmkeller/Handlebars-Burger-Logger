@@ -1,6 +1,6 @@
 const orm = require( "../config/orm.js" );
 
-const cat = {
+const burger = {
     all: function( callback ) {
         orm.all( "burgers", function( res ) {
             callback( res );
@@ -24,4 +24,4 @@ const cat = {
     }
 };
 
-module.export = burger;
+module.exports = burger;
