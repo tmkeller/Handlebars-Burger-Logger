@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #d2b48c;
+}
+
+body {
+    border: solid 12px limegreen;
+    height: 100%;
+}
+
+h1 {
+    margin: 65px 20px;
+    font-size: 50px;
+}
+
+h1, h2 {
+    color: saddlebrown;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 33px;
+}
+
+h3 {
+    color: greenyellow;
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+.fresh, .devoured {
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 48px;
+}
+
+.fresh {
+    float: left;
+}
+
+.devoured {
+    float: right;
+}
+
+.burger-table {
+    padding-top: 20px;
+    width: 360px;
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    background-color: red;
+    padding: 2px 5px;
+    color: white;
+    border-radius: 10px;
+}
+
+.create-form {
+    clear: both;
+    width: 300px;
+    text-align: center;
+    display: block;
+    margin: 40px auto;
+}
+
+input#bu {
+    background-color: white;
+}
+
+input {
+    margin: 6px;
+}
+
+.form-group {
+    padding-bottom: 10px;
+}
+
+td {
+    padding-bottom: 6px;
+    padding-right: 8px;
+}
+
+@media all and ( max-width: 800px ) {
+    .fresh, .devoured {
+        width: 100%;
+
+    }
+}
