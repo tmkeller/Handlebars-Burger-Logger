@@ -2,23 +2,23 @@ const orm = require( "../config/orm.js" );
 
 const burger = {
     all: function( callback ) {
-        orm.all( "burgers", function( res ) {
+        orm.selectAll( "burgers", function( res ) {
             callback( res );
         });
     },
     // Create takes in two arrays and a callback.
     create: function( columns, values, callback ) {
-        orm.create( "burgers", columns, values, function( res ) {
+        orm.insertOne( "burgers", columns, values, function( res ) {
             callback( res );
         });
     },
     update: function( colsValsObj, condition, callback ) {
-        orm.update( "burgers", colsValsObj, condition, function( res ) {
+        orm.updateOne( "burgers", colsValsObj, condition, function( res ) {
             callback( res );
         });
     },
     delete: function( condition, callback ) {
-        orm.delete( "burgers", condition, function( res ) {
+        orm.deleteOne( "burgers", condition, function( res ) {
             callback( res );
         });
     }

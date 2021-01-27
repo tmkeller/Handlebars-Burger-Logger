@@ -35,7 +35,7 @@ function objectToSQL( obj ) {
 
 // Create orm object for SQL statement functions.
 const orm = {
-    all: function( table, callback ) {
+    selectAll: function( table, callback ) {
         let query = `SELECT * FROM ${ table };`;
         connection.query( query, function( err, res ) {
             if ( err ) {
@@ -44,7 +44,7 @@ const orm = {
             callback( res );
         })
     },
-    create: function( table, columns, values, callback ) {
+    insertOne: function( table, columns, values, callback ) {
         let query = `INSERT INTO ${ table } (${ columns.toString() }) 
         VALUES (${ printQuestionMarks( values.length ) }) `;
 
@@ -58,7 +58,7 @@ const orm = {
         })
     },
     // colValObj is just an object with key/value pairs.
-    update: function( table, colValObj, condition, callback ) {
+    updateOne: function( table, colValObj, condition, callback ) {
         let query = `UPDATE ${ table } SET ${ objectToSQL( colValObj )} WHERE ${ condition }`;
 
         console.log( query );
@@ -71,7 +71,7 @@ const orm = {
             callback( res );
         })
     },
-    delete: function( table, condition, callback ) {
+    deleteOne: function( table, condition, callback ) {
         let query = `DELETE FROM ${ table } WHERE ${ condition }`;
 
         connection.query( query, function( err, res ) {
